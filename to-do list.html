@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* background-image: url(https://www.bluesky.com/cdn/shop/files/148187.jpg?v=1725914552&width=1100); */
+            background-image:url(https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA1L3Jhd3BpeGVsX29mZmljZV8zNF9jbG9zZXVwX3Bob3RvX29mX2xpZ2h0X3BpbmtfYnV0dGVyZmxpZXNfYW5kX19lMGE0YWU4OS1lYWZlLTQ2NzktYWYyZC1iNWI4YjEyMWJjMjBfMS5qcGc.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .main {
+            width: 500px;
+            margin: auto;
+            margin-top: 250px;
+            /* background-color: rgb(238, 155, 169); */
+            background-color: pink;
+            color: white;
+            border-radius: 30px;
+        }
+
+        .head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 320px;
+            font-size: large;
+            border: 2px solid rgb(224, 75, 100);
+            border-radius: 20px;
+            font-weight: bold;
+            padding: 15px;
+            color: palevioletred;
+        }
+
+
+        .center {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+            justify-content: center;
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 25px;
+            padding: 12px 8px 12px 50px;
+            user-select: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-image: url(circle.png);
+            background-size: cover;
+            background-position: center;
+            top: 8px;
+            left: 1px;
+
+        }
+
+
+        ul li.checked {
+            color: palevioletred;
+            text-decoration: line-through;
+        }
+
+        ul li.checked::before {
+            background-image: url(checked.png);
+            width: 60px;
+            height: 60px;
+            top: 1px;
+            left: -7px;
+        }
+
+        ul li span {
+            position: absolute;
+            right: 10%;
+            top: 8px;
+            width: 36px;
+            height: 36px;
+            font-size: 40px;
+            font-weight: bold;
+            color: rgb(224, 75, 100);
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            border: 2px solid rgb(224, 75, 100);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="head">
+            <h1>TO DO LIST</h1>
+            <img src="todoicon.png" alt="imagelogo" width="200px" height="100px" />
+        </div>
+        <div class="center"><input type="text" placeholder="   Enter your task" id="inputbox" />
+            <img src="plus icon.png" alt="plus" width="70px" height="70px" onclick="addTask()" />
+        </div>
+        <ul id="list">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+
+        </ul>
+    </div>
+    <script src="to-do list.js"></script>
+</body>
+
+</html>
